@@ -1,8 +1,8 @@
 # Day-1-(Nama_Kelompok)_Nama Lengkap
 
 ## 👤 Identitas Peserta
-* **Nama Lengkap:** [Tuliskan Nama Lengkap Anda di sini]
-* **Kelompok:** [Tuliskan Nama Kelompok Anda di sini]
+* **Nama Lengkap:** Muhammad Hakim Ilahi
+* **Kelompok:** 16 - Robbery Bob
 
 ---
 
