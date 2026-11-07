@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexaTech Solutions - Transformasi Digital Terdepan</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-bg {
+            background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.12), transparent 40%),
+                        radial-gradient(circle at bottom left, rgba(124, 58, 237, 0.12), transparent 40%);
+        }
+    </style>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- ================= NAVBAR ================= -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-purple-600 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-brand-500/30 group-hover:scale-105 transition-transform">
+                        N
+                    </div>
+                    <span class="text-xl font-bold tracking-tight text-slate-900">Nexa<span class="text-brand-600">Tech</span></span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="#beranda" class="text-sm font-medium text-slate-700 hover:text-brand-600 transition-colors">Beranda</a>
+                    <a href="#tentang" class="text-sm font-medium text-slate-700 hover:text-brand-600 transition-colors">Tentang Kami</a>
+                    <a href="#layanan" class="text-sm font-medium text-slate-700 hover:text-brand-600 transition-colors">Layanan</a>
+                    <a href="#portofolio" class="text-sm font-medium text-slate-700 hover:text-brand-600 transition-colors">Portofolio</a>
+                    <a href="#kontak" class="text-sm font-medium text-slate-700 hover:text-brand-600 transition-colors">Kontak</a>
+                </nav>
+
+                <!-- Header CTA Button -->
+                <div class="hidden md:flex items-center">
+                    <a href="#kontak" class="px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-brand-600 hover:bg-brand-700 shadow-md shadow-brand-600/20 transition-all hover:shadow-lg hover:-translate-y-0.5">
+                        Hubungi Kami
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" type="button" class="text-slate-600 hover:text-slate-900 focus:outline-none p-2" aria-label="Toggle menu">
+                        <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3 shadow-xl">
+            <a href="#beranda" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-600">Beranda</a>
+            <a href="#tentang" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-600">Tentang Kami</a>
+            <a href="#layanan" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-600">Layanan</a>
+            <a href="#portofolio" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-600">Portofolio</a>
+            <a href="#kontak" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-600">Kontak</a>
+            <div class="pt-2">
+                <a href="#kontak" class="mobile-link block w-full text-center px-5 py-3 rounded-xl text-base font-semibold text-white bg-brand-600 hover:bg-brand-700 shadow-md">
+                    Hubungi Kami
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section id="beranda" class="relative pt-32 pb-20 lg:pt-44 lg:pb-32 hero-bg overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Text Content -->
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-50 border border-brand-100 mb-6">
+                        <span class="flex h-2 w-2 rounded-full bg-brand-600 animate-ping"></span>
+                        <span class="text-xs font-semibold text-brand-700 uppercase tracking-wider">Solusi Digital Terpercaya</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
+                        Akselerasi Bisnis Anda Melalui <span class="gradient-text">Inovasi Teknologi</span>
+                    </h1>
+                    <p class="text-lg text-slate-600 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Kami membantu perusahaan berkembang pesat di era digital dengan solusi teknologi mutakhir, desain perangkat lunak kustom, dan strategi pemasaran terukur.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#layanan" class="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-white bg-brand-600 hover:bg-brand-700 shadow-lg shadow-brand-600/30 transition-all hover:-translate-y-0.5 text-center">
+                            Jelajahi Layanan <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                        <a href="#portofolio" class="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 hover:border-slate-300 transition-all text-center">
+                            Lihat Portofolio
+                        </a>
+                    </div>
+
+                    <!-- Client Trust Badges -->
+                    <div class="mt-12 pt-8 border-t border-slate-200/60">
+                        <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4">Dipercaya oleh 100+ Perusahaan Kreatif & Korporat</p>
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-8 opacity-60 grayscale hover:grayscale-0 transition-all">
+                            <span class="font-bold text-xl text-slate-700"><i class="fa-solid fa-bolt text-brand-600 mr-1"></i> TechCorp</span>
+                            <span class="font-bold text-xl text-slate-700"><i class="fa-solid fa-cube text-purple-600 mr-1"></i> Innovate</span>
+                            <span class="font-bold text-xl text-slate-700"><i class="fa-solid fa-globe text-emerald-600 mr-1"></i> GlobalX</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Visual Illustration -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Decorative Shapes -->
+                        <div class="absolute -top-6 -left-6 w-72 h-72 bg-purple-300/30 rounded-full blur-3xl"></div>
+                        <div class="absolute -bottom-6 -right-6 w-72 h-72 bg-brand-300/30 rounded-full blur-3xl"></div>
+                        
+                        <!-- Main Card / Mockup -->
+                        <div class="relative rounded-2xl bg-white p-4 shadow-2xl border border-slate-100">
+                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Tim Berkolaborasi" 
+                                 class="rounded-xl w-full object-cover h-80 sm:h-96 shadow-sm"
+                                 onerror="this.src='https://placehold.co/800x600/2563eb/ffffff?text=NexaTech+Team'">
+                            
+                            <!-- Floating Badge 1 -->
+                            <div class="absolute -bottom-5 -left-5 bg-white p-4 rounded-xl shadow-xl border border-slate-100 flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">
+                                    <i class="fa-solid fa-check text-lg"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-500 font-medium">Proyek Selesai</p>
+                                    <p class="text-lg font-bold text-slate-800">250+ Sukses</p>
+                                </div>
+                            </div>
+
+                            <!-- Floating Badge 2 -->
+                            <div class="absolute -top-5 -right-5 bg-white p-4 rounded-xl shadow-xl border border-slate-100 flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-brand-100 text-brand-600 flex items-center justify-center font-bold">
+                                    <i class="fa-solid fa-star text-lg"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-500 font-medium">Rating Klien</p>
+                                    <p class="text-lg font-bold text-slate-800">4.9 / 5.0</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= TENTANG KAMI ================= -->
+    <section id="tentang" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Left Column - Image & Grid -->
+                <div class="relative">
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80" 
+                             alt="Kantor NexaTech" 
+                             class="rounded-2xl object-cover h-64 w-full shadow-md hover:scale-[1.02] transition-transform"
+                             onerror="this.src='https://placehold.co/600x600/e2e8f0/334155?text=Kantor'">
+                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" 
+                             alt="Diskusi Tim" 
+                             class="rounded-2xl object-cover h-64 w-full shadow-md mt-8 hover:scale-[1.02] transition-transform"
+                             onerror="this.src='https://placehold.co/600x600/e2e8f0/334155?text=Diskusi'">
+                    </div>
+                </div>
+
+                <!-- Right Column - Info Content -->
+                <div>
+                    <span class="text-brand-600 font-semibold text-sm tracking-wider uppercase">Tentang NexaTech</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-6">
+                        Mitra Strategis Solusi Digital Terpercaya Anda
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed mb-6">
+                        Didirikan sejak tahun 2018, **NexaTech Solutions** adalah perusahaan konsultan teknologi dan pengembang perangkat lunak yang berkomitmen untuk memberikan solusi digital inovatif skala internasional.
+                    </p>
+
+                    <!-- Vision & Mission Tabs / Accordion -->
+                    <div class="space-y-4 mb-8">
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
+                            <h3 class="font-bold text-slate-800 flex items-center gap-2">
+                                <i class="fa-solid fa-eye text-brand-600"></i> Visi Kami
+                            </h3>
+                            <p class="text-slate-600 text-sm mt-1">
+                                Menjadi pemimpin global dalam transformasi teknologi digital yang memberdayakan bisnis untuk berkembang secara berkelanjutan.
+                            </p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
+                            <h3 class="font-bold text-slate-800 flex items-center gap-2">
+                                <i class="fa-solid fa-bullseye text-purple-600"></i> Misi Kami
+                            </h3>
+                            <p class="text-slate-600 text-sm mt-1">
+                                Menyediakan solusi perangkat lunak berkualitas tinggi, responsif, dan aman yang disesuaikan dengan kebutuhan unik setiap klien.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Key Advantage Points -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-brand-100 text-brand-600 flex items-center justify-center text-sm font-bold">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <span class="text-sm font-medium text-slate-700">Tim Profesional</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-brand-100 text-brand-600 flex items-center justify-center text-sm font-bold">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <span class="text-sm font-medium text-slate-700">Teknologi Terbaru</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-brand-100 text-brand-600 flex items-center justify-center text-sm font-bold">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <span class="text-sm font-medium text-slate-700">Dukungan 24/7</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-brand-100 text-brand-600 flex items-center justify-center text-sm font-bold">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <span class="text-sm font-medium text-slate-700">Hasil Terukur</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= LAYANAN ================= -->
+    <section id="layanan" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Title -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-600 font-semibold text-sm tracking-wider uppercase">Layanan Kami</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-4">Solusi Teknologi Komprehensif</h2>
+                <p class="text-slate-600">Kami menawarkan layanan berbasis teknologi canggih untuk membantu bisnis Anda bersaing di era digital modern.</p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Service Card 1 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Pengembangan Web</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        Pembuatan website korporat, e-commerce, dan aplikasi berbasis web yang cepat, responsif, serta aman.
+                    </p>
+                    <a href="#kontak" class="inline-flex items-center text-sm font-semibold text-brand-600 hover:text-brand-700">
+                        Konsultasi <i class="fa-solid fa-chevron-right ml-1 text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Aplikasi Mobile</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        Pengembangan aplikasi iOS dan Android performa tinggi dengan pengalaman pengguna yang intuitif.
+                    </p>
+                    <a href="#kontak" class="inline-flex items-center text-sm font-semibold text-purple-600 hover:text-purple-700">
+                        Konsultasi <i class="fa-solid fa-chevron-right ml-1 text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-pen-nib"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Desain UI/UX</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        Perancangan antarmuka pengguna yang menarik, ramah pengguna, dan difokuskan pada konversi tinggi.
+                    </p>
+                    <a href="#kontak" class="inline-flex items-center text-sm font-semibold text-emerald-600 hover:text-emerald-700">
+                        Konsultasi <i class="fa-solid fa-chevron-right ml-1 text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-amber-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Digital Marketing</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        Strategi pemasaran digital terpadu (SEO, SEM, Social Media) untuk mendatangkan lebih banyak klien potensial.
+                    </p>
+                    <a href="#kontak" class="inline-flex items-center text-sm font-semibold text-amber-600 hover:text-amber-700">
+                        Konsultasi <i class="fa-solid fa-chevron-right ml-1 text-xs"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PORTOFOLIO ================= -->
+    <section id="portofolio" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Header & Filter -->
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-brand-600 font-semibold text-sm tracking-wider uppercase">Karya Kami</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-6">Portofolio Proyek Terpopuler</h2>
+                
+                <!-- Filter Buttons -->
+                <div class="flex flex-wrap items-center justify-center gap-2" id="portfolio-filters">
+                    <button class="filter-btn px-5 py-2 rounded-full text-sm font-semibold bg-brand-600 text-white transition-all" data-filter="all">Semua</button>
+                    <button class="filter-btn px-5 py-2 rounded-full text-sm font-semibold bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all" data-filter="web">Web</button>
+                    <button class="filter-btn px-5 py-2 rounded-full text-sm font-semibold bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all" data-filter="mobile">Mobile App</button>
+                    <button class="filter-btn px-5 py-2 rounded-full text-sm font-semibold bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all" data-filter="uiux">UI/UX</button>
+                </div>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
+                
+                <!-- Project 1 -->
+                <div class="portfolio-item group relative rounded-2xl overflow-hidden shadow-md border border-slate-100 bg-white" data-category="web">
+                    <div class="overflow-hidden h-60">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" 
+                             alt="Platform E-Commerce" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/600x400/2563eb/ffffff?text=E-Commerce'">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-brand-600 uppercase">Pengembangan Web</span>
+                        <h3 class="text-xl font-bold text-slate-900 mt-1 mb-2">Platform E-Commerce Fashion</h3>
+                        <p class="text-slate-600 text-sm">Sistem toko online skala besar dengan integrasi pembayaran otomatis dan arsitektur mikro.</p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="portfolio-item group relative rounded-2xl overflow-hidden shadow-md border border-slate-100 bg-white" data-category="mobile">
+                    <div class="overflow-hidden h-60">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80" 
+                             alt="Aplikasi Mobile Banking" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/600x400/7c3aed/ffffff?text=Mobile+App'">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-purple-600 uppercase">Mobile App</span>
+                        <h3 class="text-xl font-bold text-slate-900 mt-1 mb-2">Aplikasi FinTech Banking</h3>
+                        <p class="text-slate-600 text-sm">Aplikasi dompet digital dengan keamanan biometrik dan fitur pelacak keuangan real-time.</p>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="portfolio-item group relative rounded-2xl overflow-hidden shadow-md border border-slate-100 bg-white" data-category="uiux">
+                    <div class="overflow-hidden h-60">
+                        <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=600&q=80" 
+                             alt="Dashboard Analytics" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/600x400/059669/ffffff?text=UI/UX+Design'">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-emerald-600 uppercase">UI/UX Design</span>
+                        <h3 class="text-xl font-bold text-slate-900 mt-1 mb-2">Dashboard Analytics SaaS</h3>
+                        <p class="text-slate-600 text-sm">Redesain antarmuka sistem analitik data bisnis untuk meningkatkan produktivitas tim internal.</p>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="portfolio-item group relative rounded-2xl overflow-hidden shadow-md border border-slate-100 bg-white" data-category="web">
+                    <div class="overflow-hidden h-60">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" 
+                             alt="Portal Edukasi" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/600x400/2563eb/ffffff?text=Portal+Edukasi'">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-brand-600 uppercase">Pengembangan Web</span>
+                        <h3 class="text-xl font-bold text-slate-900 mt-1 mb-2">Portal EdTech Pembelajaran</h3>
+                        <p class="text-slate-600 text-sm">Platform pembelajaran interaktif online dengan fitur live video & kuis interaktif.</p>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="portfolio-item group relative rounded-2xl overflow-hidden shadow-md border border-slate-100 bg-white" data-category="mobile">
+                    <div class="overflow-hidden h-60">
+                        <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?auto=format&fit=crop&w=600&q=80" 
+                             alt="Aplikasi Health Tech" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/600x400/7c3aed/ffffff?text=Health+App'">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-purple-600 uppercase">Mobile App</span>
+                        <h3 class="text-xl font-bold text-slate-900 mt-1 mb-2">Aplikasi Kesehatan & Telemedis</h3>
+                        <p class="text-slate-600 text-sm">Aplikasi konsultasi dokter online dan reservasi jadwal rumah sakit terpadu.</p>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="portfolio-item group relative rounded-2xl overflow-hidden shadow-md border border-slate-100 bg-white" data-category="uiux">
+                    <div class="overflow-hidden h-60">
+                        <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80" 
+                             alt="Desain Website Travel" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/600x400/059669/ffffff?text=Travel+App'">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-emerald-600 uppercase">UI/UX Design</span>
+                        <h3 class="text-xl font-bold text-slate-900 mt-1 mb-2">Aplikasi Booking Travel</h3>
+                        <p class="text-slate-600 text-sm">Rancangan sistem pemesanan tiket penerbangan dan akomodasi wisata yang modern.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= TESTIMONI ================= -->
+    <section class="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <!-- Background Decoration -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-brand-600/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-400 font-semibold text-sm tracking-wider uppercase">Testimoni Klien</span>
+                <h2 class="text-3xl sm:text-4xl font-bold mt-2 mb-4">Apa Kata Mereka Tentang Kami?</h2>
+                <p class="text-slate-400">Kepuasan klien adalah bukti nyata dari dedikasi dan kualitas kerja kami.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-slate-800/80 p-8 rounded-2xl border border-slate-700/50 relative">
+                    <div class="flex items-center gap-1 text-amber-400 mb-4">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                        "NexaTech sangat profesional! Mereka membantu kami membangun platform e-commerce dari nol dengan hasil yang sangat memuaskan dan tepat waktu."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" 
+                             alt="Siti Rahma" 
+                             class="w-12 h-12 rounded-full object-cover"
+                             onerror="this.src='https://placehold.co/100x100/3b82f6/ffffff?text=SR'">
+                        <div>
+                            <h4 class="font-bold text-white text-base">Siti Rahma</h4>
+                            <p class="text-xs text-slate-400">CEO, Fashionify Indonesia</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-slate-800/80 p-8 rounded-2xl border border-slate-700/50 relative">
+                    <div class="flex items-center gap-1 text-amber-400 mb-4">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                        "Desain UI/UX yang dibuat oleh tim NexaTech meningkatkan tingkat konversi aplikasi kami hingga 40%. Komunikasi sangat lancar!"
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" 
+                             alt="Budi Santoso" 
+                             class="w-12 h-12 rounded-full object-cover"
+                             onerror="this.src='https://placehold.co/100x100/3b82f6/ffffff?text=BS'">
+                        <div>
+                            <h4 class="font-bold text-white text-base">Budi Santoso</h4>
+                            <p class="text-xs text-slate-400">CTO, DataTech Solution</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-slate-800/80 p-8 rounded-2xl border border-slate-700/50 relative">
+                    <div class="flex items-center gap-1 text-amber-400 mb-4">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                        "Layanan konsultasi IT yang solutif. Mereka benar-benar memahami kebutuhan bisnis kami dan memberikan solusi yang efektif."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" 
+                             alt="Diana Putri" 
+                             class="w-12 h-12 rounded-full object-cover"
+                             onerror="this.src='https://placehold.co/100x100/3b82f6/ffffff?text=DP'">
+                        <div>
+                            <h4 class="font-bold text-white text-base">Diana Putri</h4>
+                            <p class="text-xs text-slate-400">Founder, Edutech Global</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= KONTAK ================= -->
+    <section id="kontak" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Info & Map -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <span class="text-brand-600 font-semibold text-sm tracking-wider uppercase">Hubungi Kami</span>
+                        <h2 class="text-3xl font-bold text-slate-900 mt-2 mb-4">Mari Berdiskusi Mengenai Proyek Anda</h2>
+                        <p class="text-slate-600 leading-relaxed">
+                            Punya pertanyaan atau ingin memulai proyek digital baru? Tim kami siap membantu Anda kapan saja.
+                        </p>
+                    </div>
+
+                    <!-- Contact Details -->
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-900">Alamat Kantor</h4>
+                                <p class="text-slate-600 text-sm">Jl. Jend. Sudirman No. 123, Jakarta Selatan, Indonesia</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-900">Email</h4>
+                                <p class="text-slate-600 text-sm">info@nexatech.co.id</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-900">Telepon / WhatsApp</h4>
+                                <p class="text-slate-600 text-sm">+62 (21) 555-0192 / +62 812-3456-7890</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map Placeholder -->
+                    <div class="rounded-2xl overflow-hidden shadow-sm border border-slate-200 h-48 bg-slate-200 relative">
+                        <iframe 
+                            class="w-full h-full border-0" 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126920.24097728775!2d106.75947802875153!3d-6.22974648782354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e80d63d05c%3A0x27192667825b4b1a!2sJakarta%20South%2C%20South%20Jakarta%20City%2C%20Jakarta!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl border border-slate-100 shadow-xl">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-6">Kirim Pesan</h3>
+                    
+                    <!-- Notification alert placeholder -->
+                    <div id="form-alert" class="hidden mb-6 p-4 rounded-xl text-sm font-medium"></div>
+
+                    <form id="contact-form" class="space-y-5">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-slate-700 mb-1">Nama Lengkap *</label>
+                                <input type="text" id="name" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all text-sm" placeholder="Nama Anda">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-slate-700 mb-1">Alamat Email *</label>
+                                <input type="email" id="email" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all text-sm" placeholder="email@perusahaan.com">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-slate-700 mb-1">Subjek</label>
+                            <input type="text" id="subject" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all text-sm" placeholder="Misal: Konsultasi Proyek Website">
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-slate-700 mb-1">Pesan Anda *</label>
+                            <textarea id="message" rows="4" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all text-sm" placeholder="Jelaskan kebutuhan atau proyek Anda secara singkat..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 rounded-xl text-white bg-brand-600 hover:bg-brand-700 font-semibold shadow-lg shadow-brand-600/30 transition-all hover:-translate-y-0.5">
+                            Kirim Pesan Sekarang <i class="fa-solid fa-paper-plane ml-2 text-sm"></i>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-slate-900 text-slate-400 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+                
+                <!-- Company info -->
+                <div class="lg:col-span-2 space-y-4">
+                    <a href="#" class="flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white font-bold text-lg">
+                            N
+                        </div>
+                        <span class="text-xl font-bold tracking-tight text-white">Nexa<span class="text-brand-500">Tech</span></span>
+                    </a>
+                    <p class="text-sm leading-relaxed max-w-sm">
+                        Penyedia layanan solusi digital mutakhir yang membantu bisnis mempercepat pertumbuhan melalui pengembangan perangkat lunak dan strategi teknologi modern.
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <a href="#" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-brand-600 hover:text-white flex items-center justify-center transition-colors" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f text-sm"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-brand-600 hover:text-white flex items-center justify-center transition-colors" aria-label="Twitter">
+                            <i class="fa-brands fa-x-twitter text-sm"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-brand-600 hover:text-white flex items-center justify-center transition-colors" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in text-sm"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-brand-600 hover:text-white flex items-center justify-center transition-colors" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links 1 -->
+                <div>
+                    <h4 class="text-white font-semibold text-sm mb-4">Navigasi</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#beranda" class="hover:text-white transition-colors">Beranda</a></li>
+                        <li><a href="#tentang" class="hover:text-white transition-colors">Tentang Kami</a></li>
+                        <li><a href="#layanan" class="hover:text-white transition-colors">Layanan</a></li>
+                        <li><a href="#portofolio" class="hover:text-white transition-colors">Portofolio</a></li>
+                        <li><a href="#kontak" class="hover:text-white transition-colors">Kontak</a></li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links 2 -->
+                <div>
+                    <h4 class="text-white font-semibold text-sm mb-4">Layanan</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#layanan" class="hover:text-white transition-colors">Pengembangan Web</a></li>
+                        <li><a href="#layanan" class="hover:text-white transition-colors">Aplikasi Mobile</a></li>
+                        <li><a href="#layanan" class="hover:text-white transition-colors">Desain UI/UX</a></li>
+                        <li><a href="#layanan" class="hover:text-white transition-colors">Digital Marketing</a></li>
+                        <li><a href="#layanan" class="hover:text-white transition-colors">Konsultasi Cloud & IT</a></li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links 3 -->
+                <div>
+                    <h4 class="text-white font-semibold text-sm mb-4">Legal & Privasi</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">Kebijakan Privasi</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Syarat & Ketentuan</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Keamanan Sistem</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom Footer Bar -->
+            <div class="mt-12 pt-8 border-t border-slate-800 text-center md:flex md:justify-between md:text-left text-xs">
+                <p>&copy; 2026 NexaTech Solutions. Hak Cipta Dilindungi Undang-Undang.</p>
+                <p class="mt-2 md:mt-0 text-slate-500">Dirancang dengan presisi & dedikasi tinggi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // 1. Mobile Menu Toggle Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+
+        // 2. Portfolio Filter Logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active styling from all buttons
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-brand-600', 'text-white');
+                    b.classList.add('bg-slate-100', 'text-slate-600');
+                });
+                
+                // Add active styling to clicked button
+                btn.classList.remove('bg-slate-100', 'text-slate-600');
+                btn.classList.add('bg-brand-600', 'text-white');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                portfolioItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // 3. Contact Form Submission (Mock Interaction)
+        const contactForm = document.getElementById('contact-form');
+        const formAlert = document.getElementById('form-alert');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            
+            // Show Success Notification
+            formAlert.className = "mb-6 p-4 rounded-xl text-sm font-medium bg-emerald-100 text-emerald-800 border border-emerald-200";
+            formAlert.innerHTML = `<i class="fa-solid fa-circle-check mr-2"></i> Terima kasih <strong>${name}</strong>, pesan Anda berhasil dikirim! Tim kami akan menghubungi Anda segera.`;
+            formAlert.classList.remove('hidden');
+
+            // Reset form
+            contactForm.reset();
+
+            // Hide alert after 5 seconds
+            setTimeout(() => {
+                formAlert.classList.add('hidden');
+            }, 5000);
+        });
+
+        // 4. Navbar Shadow effect on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>
