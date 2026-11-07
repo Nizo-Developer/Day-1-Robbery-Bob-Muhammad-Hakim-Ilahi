@@ -41,5 +41,4 @@ Repository ini dibuat sebagai bentuk dokumentasi dan penyimpanan tugas mandiri u
 ---
 
 ## 💭 Pendapat Pribadi tentang Day 1 Proyek Workshop
-> *(Tuliskan opini atau kesan pribadi Anda di sini, contoh:)*
-> "Kegiatan workshop hari pertama ini sangat seru dan membuka wawasan baru tentang bagaimana teknologi AI (seperti ChatGPT atau Claude) dapat dikombinasikan dengan alat pengembang seperti Git dan GitHub. Saya belajar bahwa membuat *prompt* yang spesifik sangat memengaruhi kualitas kode yang dihasilkan AI, serta bagaimana pentingnya melakukan *commit* secara berkala agar riwayat perubahan kode aman."
+Kegiatan workshop hari pertama ini sangat seru dan membuka wawasan baru tentang bagaimana teknologi AI (seperti ChatGPT atau Claude) dapat dikombinasikan dengan alat pengembang seperti Git dan GitHub. Saya belajar bahwa membuat *prompt* yang spesifik sangat memengaruhi kualitas kode yang dihasilkan AI, serta bagaimana pentingnya melakukan *commit* secara berkala agar riwayat perubahan kode aman.
